@@ -1,0 +1,15 @@
+[package]
+name = "cryptography"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+franklin-crypto = {git = "https://github.com/matter-labs/franklin-crypto", branch = "dev", features = ["multicore"]}
+rescue_poseidon = {git = "https://github.com/matter-labs/rescue-poseidon.git"}
+compression = {path = "../compression"}
+
+[[bin]]
+name = "circuits-run"
+path = "src/main.rs"
